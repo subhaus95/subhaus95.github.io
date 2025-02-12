@@ -3,7 +3,8 @@ layout: basic
 title: "About Me"
 date: 
 permalink: "/about/"
-description: ""
+description: "All about me. Well, perhaps more _some_ about me."
+image: "/assets/images/author/paul-hobson.jpg"
 ---
 
 Just in case curiosity has gotten the better of you, or you've reached the end of the internet, here's a little bit about me.
