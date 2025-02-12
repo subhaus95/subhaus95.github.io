@@ -1,14 +1,12 @@
 ---
 layout: post
-title: Winter Camp - 2022 Edition
-author: Paul Hobson
-categories:
-  - Outdoors
+title: "Winter Camp - 2022 Edition"
+date:
+authors: ["Paul Hobson"]
+categories: ["Outdoors, Life"]
 image: /assets/images/skicamp/IMG_0413.jpeg
-tags:
-  - outdoors
-  - camping
-  - scouts
+tags: ["outdoors, camping, scouts"]
+description: Quick update on Winter Camp
 ---
 Last weekend saw us out at Water Valley towards the foothills for our annual Winter Camp. Of course, being as Albertan weather tends to be winter when it feels like it, it was actually colder back in our November 'Fall' camp than we experienced just. No problem though. -16C overnight was cool enough to warrant the 'winter' experience and sufficiently warm enough not to impact us from having to retain social separation and all that goes along with remaining on the science-side of managing our response to COVID.
 
