@@ -1,7 +1,7 @@
 ---
 layout: basic
 title: "About Me"
-date: 
+date: 2025-02-12
 permalink: "/about/"
 description: "All about me. Well, perhaps more _some_ about me."
 image: "/assets/images/author/paul-hobson.jpg"
