@@ -4,7 +4,6 @@ title: "About Me"
 date: 
 permalink: "/about/"
 description: ""
-image: ""
 ---
 
 Just in case curiosity has gotten the better of you, or you've reached the end of the internet, here's a little bit about me.
