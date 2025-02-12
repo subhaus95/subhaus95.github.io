@@ -1,0 +1,214 @@
+{
+  "main": {
+    "id": "f354157fd14c2cb9",
+    "type": "split",
+    "children": [
+      {
+        "id": "8d3c0c1699e94153",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3b834b7ba3f9f437",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2e5e8ab71f06d0d5",
+    "type": "split",
+    "children": [
+      {
+        "id": "307899ac944d485b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cf08bbb42902a1ea",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ed24f37a839d3133",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3d7f32dd61679176",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5e1a7454aba94ab7",
+    "type": "split",
+    "children": [
+      {
+        "id": "611498d17b83b509",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "32ee4532801f23e7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b28d007c9adf2999",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "5fac8bd43f1dee99",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "501b419fd68884b0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "3b834b7ba3f9f437",
+  "lastOpenFiles": [
+    "assets/images/gen/projects/project-4-9.webp",
+    "assets/images/gen/projects/project-4-7-thumbnail.webp",
+    "assets/images/gen/projects/project-4-9-thumbnail.webp",
+    "assets/images/gen/projects/project-4-9-large.webp",
+    "assets/images/gen/projects/project-4-8.webp",
+    "assets/images/gen/projects/project-4-8-large.webp",
+    "assets/images/gen/projects/project-4-7.webp",
+    "assets/images/gen/projects/project-4-8-thumbnail.webp",
+    "assets/images/gen/projects/project-4-7-large.webp",
+    "assets/images/gen/projects/project-4-6-large.webp",
+    "assets/images/gen/projects/project-4-4.webp",
+    "assets/fonts/font-awesome/webfonts/fa-v4compatibility.woff2",
+    "assets/fonts/font-awesome/webfonts/fa-v4compatibility.ttf",
+    "assets/fonts/font-awesome/webfonts/fa-solid-900.woff2",
+    "assets/fonts/font-awesome/webfonts/fa-solid-900.ttf",
+    "assets/fonts/font-awesome/webfonts/fa-regular-400.woff2",
+    "assets/fonts/font-awesome/webfonts/fa-regular-400.ttf",
+    "assets/fonts/font-awesome/webfonts/fa-brands-400.woff2",
+    "assets/fonts/font-awesome/webfonts/fa-brands-400.ttf",
+    "assets/images/gen/services",
+    "assets/images/gen/projects",
+    "pages/terms.md",
+    "pages/services.md",
+    "pages/team.md",
+    "pages/success.md",
+    "pages/projects.md",
+    "pages/privacy.md",
+    "pages/home.md",
+    "pages/categories.md",
+    "pages/contact.md",
+    "pages/about.md",
+    "collections/_team/robert-johnson.md",
+    "collections/_team/paul-hobson.md",
+    "collections/_team/mike-vance.md",
+    "collections/_team/jessica-mannix.md",
+    "collections/_services/web-development.md",
+    "collections/_services/web-design.md",
+    "collections/_services/user-experience.md",
+    "collections/_services/software-engineering.md",
+    "collections/_services/seo.md",
+    "collections/_services/branding.md",
+    "collections/_projects/special-edition.md",
+    "collections/_projects/master-system.md",
+    "collections/_projects/clothing-range.md",
+    "collections/_projects/book-design.md",
+    "collections/_posts/2022-02-13-improving-page-speed.md"
+  ]
+}
