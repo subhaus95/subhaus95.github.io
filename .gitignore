@@ -17,6 +17,7 @@ tmp
 # Folder view configuration files
 .DS_Store
 Desktop.ini
+.obsidian
 
 # Thumbnail cache files
 ._*
