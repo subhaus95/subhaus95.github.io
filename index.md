@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Jekyll Atlantic Theme
-heading: <em>Jekyll Tailwind</em> Starter Blog
-description: Atlantic is a beautiful Tailwind CSS theme for Jekyll. It shows best practices for using Tailwind with Jekyll.
+title: SubHaus
+heading: <em>SubHaus:</em>Blog Edition
+description: SubHaus is a loose collection of blog posts that might have escaped from the noisy wetware of Paul Hobson
 
 ---

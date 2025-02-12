@@ -1,19 +1,19 @@
-# Jekyll Atlantic - A Jekyll Tailwind Theme
+# SubHaus  - A SubHaus Tailwind Theme
 
-Atlantic is a beautiful Tailwind CSS theme. It shows best practices for using Tailwind with Jekyll.
+ is a beautiful Tailwind CSS theme. It shows best practices for using Tailwind with SubHaus.
 
 [Live Demo](https://jekyll-atlantic.netlify.app/) | [Zerostatic Themes](https://www.zerostatic.io/theme/jekyll-atlantic/)
 
-![Jekyll Atlantic Theme screenshot](https://www.zerostatic.io/theme/jekyll-atlantic/jekyll-atlantic-screenshot.png)
+![SubHaus  Theme screenshot](https://www.zerostatic.io/theme/jekyll-atlantic/jekyll-atlantic-screenshot.png)
 
 ### Theme features
 
-<img width="18" height="18" src="https://jamstackthemes.dev/images/icons/jekyll.svg" /> [Jekyll](https://jekyllrb.com/) 4.1+
+<img width="18" height="18" src="https://jamstackthemes.dev/images/icons/jekyll.svg" /> [SubHaus](https://jekyllrb.com/) 4.1+
 <img width="18" height="18" src="https://jamstackthemes.dev/images/icons/tailwind.svg" /> [Tailwind CSS](https://tailwindcss.com/docs) v2.2+
 <img width="18" height="18" src="https://jamstackthemes.dev/images/icons/postcss.svg" /> [PostCSS](https://postcss.org/) 8.3+
 
 - Uses PostCSS with autoprefixer, nested css, cssnano (minify css) 
-- Works with native Jekyll commands `jekyll serve` and `jekyll build`
+- Works with native SubHaus commands `jekyll serve` and `jekyll build`
 - Correctly uses Tailwind to purge CSS in production
 - Full blog functionality
 - Beautfifuly designed responsive blog and post layouts
@@ -33,9 +33,9 @@ Atlantic is a beautiful Tailwind CSS theme. It shows best practices for using Ta
 
 ## Installation
 
-### Installing Ruby & Jekyll
+### Installing Ruby & SubHaus
  
-If this is your first time using Jekyll, please follow the [Jekyll docs](https://jekyllrb.com/docs/installation/) and make sure your local environment (including Ruby) is setup correctly.
+If this is your first time using SubHaus, please follow the [SubHaus docs](https://jekyllrb.com/docs/installation/) and make sure your local environment (including Ruby) is setup correctly.
 
 ### Installing Theme
 
@@ -53,7 +53,7 @@ npm install
 bundle install
 ``` 
 
-To start the Jekyll local development server.
+To start the SubHaus local development server.
 
 ```
 bundle exec jekyll serve
