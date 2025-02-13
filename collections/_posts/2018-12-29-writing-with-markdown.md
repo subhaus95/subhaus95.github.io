@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Writing With Markdown"
-date: 2018-12-29T10:26:40+10:00
+date: 2018-12-29
 authors: ["Paul Hobson"]
 categories: ["Development", "Javascript", "Web Design"]
 tags: ["Writing"]
