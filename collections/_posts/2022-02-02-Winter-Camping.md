@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Winter Camp - 2022 Edition"
-date: 2022-02-02T10:26:40+10:00
+date: 2022-02-02
 authors: ["Paul Hobson"]
 categories: ["Outdoors", "Life"]
 image: /assets/images/skicamp/IMG_0413.jpeg
