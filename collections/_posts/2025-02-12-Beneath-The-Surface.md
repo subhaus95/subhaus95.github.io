@@ -1,7 +1,7 @@
 ---
 layout: post
 title: “Beneath The Surface”
-date: 2025-02-12T10:26:40+10:00
+date: 2025-02-12
 authors: [“Paul Hobson”]
 categories: [“Development”]
 tags: [“jekyll”,”obsidian”,”blog”,”GitHub”]
