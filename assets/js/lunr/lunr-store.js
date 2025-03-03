@@ -22,4 +22,10 @@ var store = [{
         "tags": [],
         "url": "/rhys/",
         "teaser": null
+      },{
+        "title": "Test Mermaid",
+        "excerpt":"Here’s a simple flowchart:   graph TD;     A[Obsidian] --&gt;|exports to| B[Jekyll];     B --&gt; C{MermaidJS Support};     C --&gt;|Working| D[Success];     C --&gt;|Broken| E[Fix It!];   graph TD;     A --&gt; B;   graph TD;     A[Obsidian] --&gt;|exports to| B[Jekyll];     B --&gt; C{MermaidJS Support};     C --&gt;|Working| D[Success];     C --&gt;|Broken| E[Fix It!];  ","categories": [],
+        "tags": [],
+        "url": "/Test-Mermaid/",
+        "teaser": null
       }]

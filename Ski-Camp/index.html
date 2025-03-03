@@ -66,12 +66,30 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
   
 </script>
+  
+<!-- Load Mermaid.js -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (typeof mermaid !== "undefined") {
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: "default",
+        securityLevel: "loose"
+      });
+
+      // Force process all Mermaid blocks
+      mermaid.init(undefined, document.querySelectorAll(".language-mermaid, .mermaid"));
+    } else {
+      console.error("MermaidJS failed to initialize.");
+    }
+  });
+</script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
-
 
 
     <!-- start custom head snippets -->
@@ -290,14 +308,15 @@
 <p>It is difficult to overstate just how very normal and understated the entire weekend was. These kids continue to grow up in a world that is so very different to that of my own youth and it is my firm belief that by providing them these opportunities is at least some route to normalcy.</p>
 
 <div class="gallery" data-columns="1">
-	<img src="/assets/images/skicamp/IMG_0409.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0413.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0415.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0416.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0427.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0431.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0436.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0448.jpeg" />
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/images/skicamp/IMG_0409.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0413.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0415.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0416.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0427.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0431.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0436.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0448.jpeg"&gt;
+</code></pre></div>  </div>
 </div>
 
         
@@ -351,6 +370,48 @@
   
   <h2 class="page__related-title">You may also enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Test-Mermaid/" rel="permalink">Test Mermaid
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here’s a simple flowchart:
+
+</p>
+  </article>
+</div>
+
     
       
       

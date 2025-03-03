@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="sub.haus/feed.xml" rel="self" type="application/atom+xml" /><link href="sub.haus/" rel="alternate" type="text/html" /><updated>2025-03-03T16:46:37+00:00</updated><id>sub.haus/feed.xml</id><title type="html">SubHaus</title><subtitle>A haphazard collection of thoughts</subtitle><author><name>Paul Hobson</name></author><entry><title type="html">Rhys</title><link href="sub.haus/rhys/" rel="alternate" type="text/html" title="Rhys" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>sub.haus/rhys</id><content type="html" xml:base="sub.haus/rhys/"><![CDATA[<p>I have written and deleted the start of this post more times than I care to admit this morning. It’s hard to encapsulate how I feel when the news that Rhys passed away is still so fresh.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="sub.haus/feed.xml" rel="self" type="application/atom+xml" /><link href="sub.haus/" rel="alternate" type="text/html" /><updated>2025-03-03T23:27:25+00:00</updated><id>sub.haus/feed.xml</id><title type="html">SubHaus</title><subtitle>A haphazard collection of thoughts</subtitle><author><name>Paul Hobson</name></author><entry><title type="html">Test Mermaid</title><link href="sub.haus/Test-Mermaid/" rel="alternate" type="text/html" title="Test Mermaid" /><published>2025-03-03T00:00:00+00:00</published><updated>2025-03-03T00:00:00+00:00</updated><id>sub.haus/Test-Mermaid</id><content type="html" xml:base="sub.haus/Test-Mermaid/"><![CDATA[<p>Here’s a simple flowchart:</p>
+
+<pre><code class="language-mermaid">graph TD;
+    A[Obsidian] --&gt;|exports to| B[Jekyll];
+    B --&gt; C{MermaidJS Support};
+    C --&gt;|Working| D[Success];
+    C --&gt;|Broken| E[Fix It!];
+</code></pre>
+
+<pre><code class="language-mermaid">graph TD;
+    A --&gt; B;
+</code></pre>
+
+<pre><code class="language-mermaid">graph TD;
+    A[Obsidian] --&gt;|exports to| B[Jekyll];
+    B --&gt; C{MermaidJS Support};
+    C --&gt;|Working| D[Success];
+    C --&gt;|Broken| E[Fix It!];
+</code></pre>]]></content><author><name>Paul Hobson</name></author><summary type="html"><![CDATA[Here’s a simple flowchart:]]></summary></entry><entry><title type="html">Rhys</title><link href="sub.haus/rhys/" rel="alternate" type="text/html" title="Rhys" /><published>2022-03-07T00:00:00+00:00</published><updated>2022-03-07T00:00:00+00:00</updated><id>sub.haus/rhys</id><content type="html" xml:base="sub.haus/rhys/"><![CDATA[<p>I have written and deleted the start of this post more times than I care to admit this morning. It’s hard to encapsulate how I feel when the news that Rhys passed away is still so fresh.</p>
 
 <p>I feel numb.</p>
 
@@ -21,14 +39,15 @@
 <p>It is difficult to overstate just how very normal and understated the entire weekend was. These kids continue to grow up in a world that is so very different to that of my own youth and it is my firm belief that by providing them these opportunities is at least some route to normalcy.</p>
 
 <div class="gallery" data-columns="1">
-	<img src="/assets/images/skicamp/IMG_0409.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0413.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0415.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0416.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0427.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0431.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0436.jpeg" />
-	<img src="/assets/images/skicamp/IMG_0448.jpeg" />
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/images/skicamp/IMG_0409.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0413.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0415.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0416.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0427.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0431.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0436.jpeg"&gt;
+&lt;img src="/assets/images/skicamp/IMG_0448.jpeg"&gt;
+</code></pre></div>  </div>
 </div>]]></content><author><name>Paul Hobson</name></author><summary type="html"><![CDATA[I’m writing this post through a different lens than I would have done twenty-four hours ago.]]></summary></entry><entry><title type="html">Winter Camping</title><link href="sub.haus/Winter-Camping/" rel="alternate" type="text/html" title="Winter Camping" /><published>2022-02-02T00:00:00+00:00</published><updated>2022-02-02T00:00:00+00:00</updated><id>sub.haus/Winter-Camping</id><content type="html" xml:base="sub.haus/Winter-Camping/"><![CDATA[<p>Last weekend saw us out at Water Valley towards the foothills for our annual Winter Camp. Of course, being as Albertan weather tends to be winter when it feels like it, it was actually colder back in our November ‘Fall’ camp than we experienced just. No problem though. -16C overnight was cool enough to warrant the ‘winter’ experience and sufficiently warm enough not to impact us from having to retain social separation and all that goes along with remaining on the science-side of managing our response to COVID.</p>
 
 <p>Ice Safety was the core theme to the weekend, given we were sat at the side of a large enough lake to offer a great risk landscape.  We took to the ice with an auger and talked over ice thickness for weight support and signs to watch for in ice conditions. It’s always intersting to see confidence grow in the skills we teach from those who are maybe just that little more nervous about trying something new.</p>
