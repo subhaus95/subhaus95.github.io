@@ -1,1 +1,1 @@
-Sitemap: sub.haus/sitemap.xml
+Sitemap: https://sub.haus/sitemap.xml

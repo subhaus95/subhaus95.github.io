@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>sub.haus/Back-to-the-Future/</loc>
+<loc>https://sub.haus/2022/02/01/Back-to-the-Future/</loc>
 <lastmod>2022-02-01T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>sub.haus/Winter-Camping/</loc>
+<loc>https://sub.haus/2022/02/02/Winter-Camping/</loc>
 <lastmod>2022-02-02T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>sub.haus/Ski-Camp/</loc>
+<loc>https://sub.haus/2022/03/06/Ski-Camp/</loc>
 <lastmod>2022-03-06T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>sub.haus/rhys/</loc>
+<loc>https://sub.haus/2022/03/07/rhys/</loc>
 <lastmod>2022-03-07T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>sub.haus/Why-I-Chose-Obsidian.-From-Pandemic-Discovery-to-Daily-Driver/</loc>
+<loc>https://sub.haus/2025/03/03/Why-I-Chose-Obsidian</loc>
 <lastmod>2025-03-03T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>sub.haus/</loc>
+<loc>https://sub.haus/about/</loc>
+</url>
+<url>
+<loc>https://sub.haus/</loc>
 </url>
 </urlset>
