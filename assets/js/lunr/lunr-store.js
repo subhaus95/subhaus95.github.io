@@ -23,9 +23,9 @@ var store = [{
         "url": "/rhys/",
         "teaser": null
       },{
-        "title": "Test Mermaid",
-        "excerpt":"Here’s a simple flowchart:   graph TD;     A[Obsidian] --&gt;|exports to| B[Jekyll];     B --&gt; C{MermaidJS Support};     C --&gt;|Working| D[Success];     C --&gt;|Broken| E[Fix It!];   graph TD;     A --&gt; B;   graph TD;     A[Obsidian] --&gt;|exports to| B[Jekyll];     B --&gt; C{MermaidJS Support};     C --&gt;|Working| D[Success];     C --&gt;|Broken| E[Fix It!];  ","categories": [],
+        "title": "Why I Chose Obsidian. From Pandemic Discovery To Daily Driver",
+        "excerpt":"Why I Chose Obsidian: From Pandemic Discovery to Daily Driver When the pandemic hit in early 2020, like many of us, I suddenly found myself with an abundance of unexpected free time. With no real expectation that I would be returning to the role I was stood down from, I...","categories": [],
         "tags": [],
-        "url": "/Test-Mermaid/",
+        "url": "/Why-I-Chose-Obsidian.-From-Pandemic-Discovery-to-Daily-Driver/",
         "teaser": null
       }]
