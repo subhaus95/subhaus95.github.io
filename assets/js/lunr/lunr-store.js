@@ -28,4 +28,10 @@ var store = [{
         "tags": [],
         "url": "/2025/03/03/Why-I-Chose-Obsidian",
         "teaser": null
+      },{
+        "title": "Echoes and effects of the covid 19 pandemic on youth redux",
+        "excerpt":"As a few of us ex-Westjetters were heading to grab coffee the other morning, it suddenly struck me that we are fast approaching half a decade since the onset of the COVID-19 Pandemic. Half. A. Decade. It doesn’t seem real that so much time has already passed. Related to that,...","categories": [],
+        "tags": [],
+        "url": "/2025/03/04/Echoes-and-Effects-of-the-COVID-19-Pandemic-on-Youth-Redux/",
+        "teaser": null
       }]
