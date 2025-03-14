@@ -35,7 +35,7 @@ var store = [{
         "url": "/2025/03/04/Echoes-and-Effects-of-the-COVID-19-Pandemic-on-Youth-(Redux)/",
         "teaser": null
       },{
-        "title": "The satellites that never sleep   how we keep an eye on earth",
+        "title": "The satellites That Never Sleep    how we keep an eye on earth",
         "excerpt":"There’s something rather humbling about standing in your back garden on a clear Calgary night, staring up at the stars with a mug of tea gone cold in your hands, and suddenly spotting that telltale streak of light moving steadily across the heavens. Not a shooting star, mind you, but...","categories": [],
         "tags": [],
         "url": "/2025/03/14/The-Satellites-That-Never-Sleep-How-We-Keep-an-Eye-on-Earth/",
