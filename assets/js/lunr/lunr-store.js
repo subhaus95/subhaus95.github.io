@@ -36,7 +36,7 @@ var store = [{
         "teaser": null
       },{
         "title": "The satellites that never sleep   how we keep an eye on earth",
-        "excerpt":"The Satellites That Never Sleep: How We Keep an Eye on Earth There’s something rather humbling about standing in your back garden on a clear Calgary night, staring up at the stars with a mug of tea gone cold in your hands, and suddenly spotting that telltale streak of light...","categories": [],
+        "excerpt":"There’s something rather humbling about standing in your back garden on a clear Calgary night, staring up at the stars with a mug of tea gone cold in your hands, and suddenly spotting that telltale streak of light moving steadily across the heavens. Not a shooting star, mind you, but...","categories": [],
         "tags": [],
         "url": "/2025/03/14/The-Satellites-That-Never-Sleep-How-We-Keep-an-Eye-on-Earth/",
         "teaser": null
