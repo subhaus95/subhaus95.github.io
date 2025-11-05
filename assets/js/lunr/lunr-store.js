@@ -23,21 +23,9 @@ var store = [{
         "url": "/2022/03/07/rhys/",
         "teaser": null
       },{
-        "title": "Why I Chose Obsidian.",
-        "excerpt":"Why I Chose Obsidian: From Pandemic Discovery to Daily Driver When the pandemic hit in early 2020, like many of us, I suddenly found myself with an abundance of unexpected free time. With no real expectation that I would be returning to the role I was stood down from, I...","categories": [],
-        "tags": [],
-        "url": "/2025/03/03/Why-I-Chose-Obsidian",
-        "teaser": null
-      },{
         "title": "Echoes and effects of the covid 19 pandemic on youth (redux)",
         "excerpt":"As a few of us ex-Westjetters were heading to grab coffee the other morning, it suddenly struck me that we are fast approaching half a decade since the onset of the COVID-19 Pandemic. Half. A. Decade. It doesn’t seem real that so much time has already passed. Related to that,...","categories": [],
         "tags": [],
         "url": "/2025/03/04/Echoes-and-Effects-of-the-COVID-19-Pandemic-on-Youth-(Redux)/",
-        "teaser": null
-      },{
-        "title": "The satellites That Never Sleep    how we keep an eye on earth",
-        "excerpt":"There’s something rather humbling about standing in your back garden on a clear Calgary night, staring up at the stars with a mug of tea gone cold in your hands, and suddenly spotting that telltale streak of light moving steadily across the heavens. Not a shooting star, mind you, but...","categories": [],
-        "tags": [],
-        "url": "/2025/03/14/The-Satellites-That-Never-Sleep-How-We-Keep-an-Eye-on-Earth/",
         "teaser": null
       }]
