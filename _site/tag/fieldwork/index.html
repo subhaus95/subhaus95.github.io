@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html lang="en" data-brand="subhaus" data-theme="dark">
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>fieldwork — Loom</title>
-<meta name="description" content="Jekyll theme. Clean typography, dark mode, computational essays.">
+<title>fieldwork — subhaus95</title>
+<meta name="description" content="Homelab. Infrastructure experiments. Technical notes.">
 
 <!-- Dark mode flash prevention — runs synchronously before first paint -->
 <script>
   (function () {
-    var s = localStorage.getItem('loom-dark');
-    var dark = s !== null ? s === '1' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var defaultDark = 'dark' === 'dark';
+    var s = localStorage.getItem('theme');
+    var dark = s !== null ? s === 'dark' : defaultDark;
     document.documentElement.dataset.theme = dark ? 'dark' : 'light';
   })();
 </script>
@@ -31,7 +33,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 
 <!-- Theme stylesheet (Vite build output) -->
-<link rel="stylesheet" href="/assets/built/main.css">
+<link rel="stylesheet" href="/assets/dist/main.css">
+
+<!-- Brand token overrides — loaded after main.css so variables cascade correctly -->
+
+<link rel="stylesheet" href="/assets/css/brand-subhaus.css">
 
 
 
@@ -39,21 +45,21 @@
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>fieldwork | Loom</title>
+<title>fieldwork | subhaus95</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="fieldwork" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Jekyll theme. Clean typography, dark mode, computational essays." />
-<meta property="og:description" content="Jekyll theme. Clean typography, dark mode, computational essays." />
-<link rel="canonical" href="/tag/fieldwork/" />
-<meta property="og:url" content="/tag/fieldwork/" />
-<meta property="og:site_name" content="Loom" />
+<meta name="description" content="Homelab. Infrastructure experiments. Technical notes." />
+<meta property="og:description" content="Homelab. Infrastructure experiments. Technical notes." />
+<link rel="canonical" href="https://subhaus95.github.io/tag/fieldwork/" />
+<meta property="og:url" content="https://subhaus95.github.io/tag/fieldwork/" />
+<meta property="og:site_name" content="subhaus95" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="fieldwork" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Jekyll theme. Clean typography, dark mode, computational essays.","headline":"fieldwork","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/loom_collective.jpg"}},"url":"/tag/fieldwork/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Homelab. Infrastructure experiments. Technical notes.","headline":"fieldwork","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://subhaus95.github.io/assets/images/og-default.png"}},"url":"https://subhaus95.github.io/tag/fieldwork/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -79,19 +85,29 @@
 
     <!-- Logo -->
     <a href="/" class="nav-logo">
-      <img loading="lazy" src="/assets/images/loom_collective.jpg" alt="Loom" width="32" height="32">
-      Loom<span>.</span>
+      
+      <img loading="lazy" src="/assets/images/og-default.png" alt="subhaus95" width="32" height="32">
+      
+      subhaus95<span>.</span>
     </a>
 
     <!-- Desktop nav links -->
     <ul class="nav-links" role="list">
       
       <li>
-        <a href="/">Home</a>
+        <a href="/now/">Now</a>
       </li>
       
       <li>
-        <a href="/topics/">Topics</a>
+        <a href="/notes/">Notes</a>
+      </li>
+      
+      <li>
+        <a href="/builds/">Builds</a>
+      </li>
+      
+      <li>
+        <a href="/stack/">Stack</a>
       </li>
       
       <li>
@@ -182,11 +198,19 @@
     <ul role="list">
       
       <li>
-        <a href="/" @click="open = false">Home</a>
+        <a href="/now/" @click="open = false">Now</a>
       </li>
       
       <li>
-        <a href="/topics/" @click="open = false">Topics</a>
+        <a href="/notes/" @click="open = false">Notes</a>
+      </li>
+      
+      <li>
+        <a href="/builds/" @click="open = false">Builds</a>
+      </li>
+      
+      <li>
+        <a href="/stack/" @click="open = false">Stack</a>
       </li>
       
       <li>
@@ -356,11 +380,13 @@
     <!-- Col 1: Brand -->
     <div class="footer-brand">
       <div class="footer-brand-logo">
-        <img loading="lazy" src="/assets/images/loom_collective.jpg" alt="Loom" width="28" height="28">
-        Loom<span>.</span>
+        
+        <img loading="lazy" src="/assets/images/og-default.png" alt="subhaus95" width="28" height="28">
+        
+        subhaus95<span>.</span>
       </div>
       
-      <p class="footer-brand-desc">Jekyll theme. Clean typography, dark mode, computational essays.</p>
+      <p class="footer-brand-desc">Homelab. Infrastructure experiments. Technical notes.</p>
       
 
       <div class="footer-social">
@@ -418,7 +444,7 @@
 
   <div class="footer-bottom">
     <span class="footer-copy">
-      &copy; 2026 Loom.
+      &copy; 2026 subhaus95.
     </span>
     <div class="footer-legal">
       <a href="/privacy/">Privacy Policy</a>
@@ -430,7 +456,7 @@
 
 
 <!-- Alpine.js bundle -->
-<script type="module" src="/assets/built/main.js"></script>
+<script type="module" src="/assets/dist/main.js"></script>
 
 <!-- Visualization runtime — detects and loads CDN libraries dynamically -->
 <script type="module" src="/assets/js/core.js"></script>

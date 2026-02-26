@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html lang="en" data-brand="subhaus" data-theme="dark">
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home — Loom</title>
-<meta name="description" content="Jekyll theme. Clean typography, dark mode, computational essays.">
+<title>subhaus95 — subhaus95</title>
+<meta name="description" content="Homelab. Infrastructure experiments. Technical notes.">
 
 <!-- Dark mode flash prevention — runs synchronously before first paint -->
 <script>
   (function () {
-    var s = localStorage.getItem('loom-dark');
-    var dark = s !== null ? s === '1' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var defaultDark = 'dark' === 'dark';
+    var s = localStorage.getItem('theme');
+    var dark = s !== null ? s === 'dark' : defaultDark;
     document.documentElement.dataset.theme = dark ? 'dark' : 'light';
   })();
 </script>
@@ -31,7 +33,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 
 <!-- Theme stylesheet (Vite build output) -->
-<link rel="stylesheet" href="/assets/built/main.css">
+<link rel="stylesheet" href="/assets/dist/main.css">
+
+<!-- Brand token overrides — loaded after main.css so variables cascade correctly -->
+
+<link rel="stylesheet" href="/assets/css/brand-subhaus.css">
 
 
 
@@ -39,21 +45,21 @@
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Home | Loom</title>
+<title>subhaus95 | Homelab. Infrastructure experiments. Technical notes.</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Home" />
+<meta property="og:title" content="subhaus95" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Jekyll theme. Clean typography, dark mode, computational essays." />
-<meta property="og:description" content="Jekyll theme. Clean typography, dark mode, computational essays." />
-<link rel="canonical" href="/" />
-<meta property="og:url" content="/" />
-<meta property="og:site_name" content="Loom" />
+<meta name="description" content="Homelab. Infrastructure experiments. Technical notes." />
+<meta property="og:description" content="Homelab. Infrastructure experiments. Technical notes." />
+<link rel="canonical" href="https://subhaus95.github.io/" />
+<meta property="og:url" content="https://subhaus95.github.io/" />
+<meta property="og:site_name" content="subhaus95" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Home" />
+<meta property="twitter:title" content="subhaus95" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","dateModified":"2026-02-24T19:24:05-07:00","description":"Jekyll theme. Clean typography, dark mode, computational essays.","headline":"Home","name":"Loom","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/loom_collective.jpg"}},"url":"/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","dateModified":"2026-02-25T14:30:52-07:00","description":"Homelab. Infrastructure experiments. Technical notes.","headline":"subhaus95","name":"subhaus95","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://subhaus95.github.io/assets/images/og-default.png"}},"url":"https://subhaus95.github.io/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -61,7 +67,7 @@
 
 </head>
 <body class="
-  home-template
+  default-template
   
   
   
@@ -79,19 +85,29 @@
 
     <!-- Logo -->
     <a href="/" class="nav-logo">
-      <img loading="lazy" src="/assets/images/loom_collective.jpg" alt="Loom" width="32" height="32">
-      Loom<span>.</span>
+      
+      <img loading="lazy" src="/assets/images/og-default.png" alt="subhaus95" width="32" height="32">
+      
+      subhaus95<span>.</span>
     </a>
 
     <!-- Desktop nav links -->
     <ul class="nav-links" role="list">
       
       <li>
-        <a href="/">Home</a>
+        <a href="/now/">Now</a>
       </li>
       
       <li>
-        <a href="/topics/">Topics</a>
+        <a href="/notes/">Notes</a>
+      </li>
+      
+      <li>
+        <a href="/builds/">Builds</a>
+      </li>
+      
+      <li>
+        <a href="/stack/">Stack</a>
       </li>
       
       <li>
@@ -182,11 +198,19 @@
     <ul role="list">
       
       <li>
-        <a href="/" @click="open = false">Home</a>
+        <a href="/now/" @click="open = false">Now</a>
       </li>
       
       <li>
-        <a href="/topics/" @click="open = false">Topics</a>
+        <a href="/notes/" @click="open = false">Notes</a>
+      </li>
+      
+      <li>
+        <a href="/builds/" @click="open = false">Builds</a>
+      </li>
+      
+      <li>
+        <a href="/stack/" @click="open = false">Stack</a>
       </li>
       
       <li>
@@ -200,857 +224,135 @@
 
 
 <div id="main-content">
-  <!-- HERO -->
-<section class="hero-section">
-  <div class="hero">
-    
+  <div class="posts-section-inner" style="max-width:var(--content-width,72ch);margin:0 auto;padding:var(--space-8) var(--space-4)">
 
-    <div class="hero-content">
-      <h1 class="hero-headline">
-        Loom
-      </h1>
+  <div style="font-family:var(--font-mono,monospace);margin-bottom:var(--space-8)">
+    <pre style="white-space:pre-wrap;line-height:1.6">$ whoami
+subhaus95 — homelab notebook
 
-      <p class="hero-sub">
-        Jekyll theme. Clean typography, dark mode, computational essays.
-      </p>
+$ uptime
+running since the late nineties, more or less
 
-      
-      <a href="/documenting-fieldwork-media-and-embeds/" class="hero-cta-btn">Start reading →</a>
-      
-    </div><!-- /.hero-content -->
+$ man subhaus95
+Infrastructure experiments. Technical notes.
+Things that broke and how they got fixed.
+Stack documentation and build logs.
 
-    <!-- Latest post — clickable preview card -->
-    
-    <div class="hero-visual">
-      <a href="/documenting-fieldwork-media-and-embeds/" class="hero-card-link" aria-label="Read: Documenting Fieldwork: Photos, Video, and Embedded Media">
-        <article class="post-card hero-card-preview">
-          
-          <div class="card-image">
-            <img src="/assets/images/matterhorn.jpg" alt="" loading="eager">
-          </div>
-          
-          <div class="card-body">
-            <span class="hero-card-latest-label">Latest</span>
-            
-            <span class="card-tag">meta</span>
-            
-            <h3 class="card-title">Documenting Fieldwork: Photos, Video, and Embedded Media</h3>
-            
-            <p class="card-excerpt">A practical guide to embedding rich media in Loom posts — photo galleries with lightbox, native video, YouTube and Vimeo...</p>
-            
-            <div class="card-meta">
-              
-              
-              
-              
-              <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="eager" style="border-radius:50%;object-fit:cover;">
-              
-              <div class="card-meta-info">
-                <span class="card-author">
+$ ls -1 /interesting
+builds/    hardware and infrastructure build logs
+notes/     short technical notes
+stack/     what's running and why
+now/       current focus</pre>
+  </div>
 
-
-
-
-
-
-
+  <div style="margin-bottom:var(--space-8)">
+    <h2 class="section-title" style="margin-bottom:var(--space-4)">Now</h2>
+    <p>Current focus: <a href="/now/">see the /now page</a>.</p>
+  </div>
 
   
-  
-    
-<span class="author-name">Paul Hobson</span>
-    
-  
-  <span class="author-sep">, </span>
-
-  
-  
-    
-<span class="author-name">Sophie Marchand</span>
-    
-  
-  
-
-</span>
-                <span class="card-date">5 Mar 2026</span>
-              </div>
-            </div>
-            <span class="hero-read-cta">Read now →</span>
-          </div>
-        </article>
-      </a>
-    </div>
-    
-
-  </div><!-- /.hero -->
-</section>
-
-<!-- FEATURED POSTS -->
-
-
-<section class="featured-section">
-  <div class="featured-inner">
-
+  <div style="margin-bottom:var(--space-8)">
     <div class="section-header">
-      <h2 class="section-title">Featured stories</h2>
-      <a href="/archive/" class="section-link">View all →</a>
+      <h2 class="section-title">Recent notes</h2>
+      <a href="/archive/" class="section-link">All →</a>
     </div>
-
-    <div class="featured-grid">
+    <ul style="list-style:none;padding:0;margin:0">
       
+      <li style="display:flex;gap:var(--space-4);align-items:baseline;padding:var(--space-2) 0;border-bottom:1px solid var(--color-border)">
+        <time style="font-family:var(--font-mono,monospace);font-size:0.8em;color:var(--color-muted);white-space:nowrap">2026-03-05</time>
+        <a href="/documenting-fieldwork-media-and-embeds/" style="flex:1">Documenting Fieldwork: Photos, Video, and Embedded Media</a>
+        
+        <span class="card-tag" style="white-space:nowrap">meta</span>
+        
+      </li>
       
-<article class="post-card">
-
-  
-  <a href="/mapbox-gl-interactive-maps/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/og-default.png" alt="" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/meta/" class="card-tag">meta</a>
-    
-
-    <h3 class="card-title">
-      <a href="/mapbox-gl-interactive-maps/">Interactive Maps with Mapbox GL JS</a>
-    </h3>
-
-    
-    <p class="card-excerpt">Full-featured vector maps with custom styles, scroll-driven flyTo transitions, and automatic dark mode switching — using the Mapbox GL JS adapter.</p>
-    
-
-    <div class="card-meta">
+      <li style="display:flex;gap:var(--space-4);align-items:baseline;padding:var(--space-2) 0;border-bottom:1px solid var(--color-border)">
+        <time style="font-family:var(--font-mono,monospace);font-size:0.8em;color:var(--color-muted);white-space:nowrap">2026-03-02</time>
+        <a href="/glaciers-field-sites/" style="flex:1">Glaciers I Have Known</a>
+        
+        <span class="card-tag" style="white-space:nowrap">science</span>
+        
+      </li>
       
+      <li style="display:flex;gap:var(--space-4);align-items:baseline;padding:var(--space-2) 0;border-bottom:1px solid var(--color-border)">
+        <time style="font-family:var(--font-mono,monospace);font-size:0.8em;color:var(--color-muted);white-space:nowrap">2026-03-01</time>
+        <a href="/mapbox-gl-interactive-maps/" style="flex:1">Interactive Maps with Mapbox GL JS</a>
+        
+        <span class="card-tag" style="white-space:nowrap">meta</span>
+        
+      </li>
       
+      <li style="display:flex;gap:var(--space-4);align-items:baseline;padding:var(--space-2) 0;border-bottom:1px solid var(--color-border)">
+        <time style="font-family:var(--font-mono,monospace);font-size:0.8em;color:var(--color-muted);white-space:nowrap">2026-02-28</time>
+        <a href="/sample-presentation/" style="flex:1">Introducing Loom</a>
+        
+        <span class="card-tag" style="white-space:nowrap">meta</span>
+        
+      </li>
       
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
+      <li style="display:flex;gap:var(--space-4);align-items:baseline;padding:var(--space-2) 0;border-bottom:1px solid var(--color-border)">
+        <time style="font-family:var(--font-mono,monospace);font-size:0.8em;color:var(--color-muted);white-space:nowrap">2026-02-27</time>
+        <a href="/scrollytelling-with-maps-and-charts/" style="flex:1">Scrollytelling with Maps and Charts</a>
+        
+        <span class="card-tag" style="white-space:nowrap">meta</span>
+        
+      </li>
       
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
+      <li style="display:flex;gap:var(--space-4);align-items:baseline;padding:var(--space-2) 0;border-bottom:1px solid var(--color-border)">
+        <time style="font-family:var(--font-mono,monospace);font-size:0.8em;color:var(--color-muted);white-space:nowrap">2026-02-26</time>
+        <a href="/interactive-charts-echarts-and-d3/" style="flex:1">Interactive Charts with ECharts and D3</a>
+        
+        <span class="card-tag" style="white-space:nowrap">meta</span>
+        
+      </li>
+      
+      <li style="display:flex;gap:var(--space-4);align-items:baseline;padding:var(--space-2) 0;border-bottom:1px solid var(--color-border)">
+        <time style="font-family:var(--font-mono,monospace);font-size:0.8em;color:var(--color-muted);white-space:nowrap">2026-02-25</time>
+        <a href="/rendering-mathematics-and-diagrams/" style="flex:1">Rendering Mathematics and Diagrams</a>
+        
+        <span class="card-tag" style="white-space:nowrap">meta</span>
+        
+      </li>
+      
+      <li style="display:flex;gap:var(--space-4);align-items:baseline;padding:var(--space-2) 0;border-bottom:1px solid var(--color-border)">
+        <time style="font-family:var(--font-mono,monospace);font-size:0.8em;color:var(--color-muted);white-space:nowrap">2026-02-25</time>
+        <a href="/howto/" style="flex:1">HOWTO</a>
+        
+        <span class="card-tag" style="white-space:nowrap">meta</span>
+        
+      </li>
+      
+      <li style="display:flex;gap:var(--space-4);align-items:baseline;padding:var(--space-2) 0;border-bottom:1px solid var(--color-border)">
+        <time style="font-family:var(--font-mono,monospace);font-size:0.8em;color:var(--color-muted);white-space:nowrap">2026-02-24</time>
+        <a href="/welcome-to-loom/" style="flex:1">What Loom Is and How It Works</a>
+        
+        <span class="card-tag" style="white-space:nowrap">meta</span>
+        
+      </li>
+      
+      <li style="display:flex;gap:var(--space-4);align-items:baseline;padding:var(--space-2) 0;border-bottom:1px solid var(--color-border)">
+        <time style="font-family:var(--font-mono,monospace);font-size:0.8em;color:var(--color-muted);white-space:nowrap">2026-02-24</time>
+        <a href="/ricker-model-essay/" style="flex:1">The Ricker Model: Population Dynamics Through a Single Equation</a>
+        
+        <span class="card-tag" style="white-space:nowrap">ecology</span>
+        
+      </li>
+      
+    </ul>
+  </div>
   
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
 
-</span>
-        <span class="card-date">1 Mar 2026 · 4 min read</span>
-      </div>
+  <div>
+    <h2 class="section-title" style="margin-bottom:var(--space-4)">Quick links</h2>
+    <div style="display:flex;gap:var(--space-3);flex-wrap:wrap">
+      <a href="/now/" class="btn btn-ghost">Now</a>
+      <a href="/stack/" class="btn btn-ghost">Stack</a>
+      <a href="/builds/" class="btn btn-ghost">Builds</a>
+      <a href="/archive/" class="btn btn-ghost">Archive</a>
     </div>
+  </div>
 
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-      
-<article class="post-card">
-
-  
-  <a href="/welcome-to-loom/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/og-default.png" alt="" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/meta/" class="card-tag">meta</a>
-    
-
-    <h3 class="card-title">
-      <a href="/welcome-to-loom/">What Loom Is and How It Works</a>
-    </h3>
-
-    
-    <p class="card-excerpt">A fast Jekyll site with dark mode, computational essays, and a full visualisation runtime — what's in the stack and why each piece is here....</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">24 Feb 2026 · 3 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-    </div><!-- /.featured-grid -->
-
-  </div><!-- /.featured-inner -->
-</section>
-
-
-<!-- TOPICS -->
-
-
-<section class="topics-section">
-  <div class="topics-inner">
-
-    <div class="section-header">
-      <h2 class="section-title">Browse by topic</h2>
-    </div>
-
-    <div class="topics-scroll" role="list">
-      
-      <a href="/topic/ecology/" class="topic-chip" role="listitem">
-        ecology
-        <span class="topic-count">1</span>
-      </a>
-      
-      <a href="/topic/meta/" class="topic-chip" role="listitem">
-        meta
-        <span class="topic-count">8</span>
-      </a>
-      
-      <a href="/topic/science/" class="topic-chip" role="listitem">
-        science
-        <span class="topic-count">1</span>
-      </a>
-      
-    </div>
-
-  </div><!-- /.topics-inner -->
-</section>
-
-
-<!-- LATEST ARTICLES -->
-<section class="posts-section">
-  <div class="posts-section-inner">
-
-    <div class="section-header">
-      <h2 class="section-title">Latest articles</h2>
-      <a href="/archive/" class="section-link">View archive →</a>
-    </div>
-
-    <div class="posts-grid">
-      
-      
-<article class="post-card">
-
-  
-  <a href="/ricker-model-essay/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/og-default.png" alt="" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/ecology/" class="card-tag">ecology</a>
-    
-
-    <h3 class="card-title">
-      <a href="/ricker-model-essay/">The Ricker Model: Population Dynamics Through a Single Equation</a>
-    </h3>
-
-    
-    <p class="card-excerpt">How a deceptively simple recurrence relation explains boom-bust cycles in fish populations — and what it reveals about chaos.</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">24 Feb 2026 · 1 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-      
-<article class="post-card">
-
-  
-  <a href="/welcome-to-loom/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/og-default.png" alt="" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/meta/" class="card-tag">meta</a>
-    
-
-    <h3 class="card-title">
-      <a href="/welcome-to-loom/">What Loom Is and How It Works</a>
-    </h3>
-
-    
-    <p class="card-excerpt">A fast Jekyll site with dark mode, computational essays, and a full visualisation runtime — what's in the stack and why each piece is here....</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">24 Feb 2026 · 3 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-      
-<article class="post-card">
-
-  
-  <a href="/howto/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/og-default.png" alt="" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/meta/" class="card-tag">meta</a>
-    
-
-    <h3 class="card-title">
-      <a href="/howto/">HOWTO</a>
-    </h3>
-
-    
-    <p class="card-excerpt">A complete reference for building, configuring, and writing content for the Loom Jekyll theme.</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">25 Feb 2026 · 39 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-      
-<article class="post-card">
-
-  
-  <a href="/rendering-mathematics-and-diagrams/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/og-default.png" alt="" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/meta/" class="card-tag">meta</a>
-    
-
-    <h3 class="card-title">
-      <a href="/rendering-mathematics-and-diagrams/">Rendering Mathematics and Diagrams</a>
-    </h3>
-
-    
-    <p class="card-excerpt">How to embed KaTeX equations and Mermaid diagrams in posts — auto-detected, no configuration required.</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">25 Feb 2026 · 3 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-      
-<article class="post-card">
-
-  
-  <a href="/interactive-charts-echarts-and-d3/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/og-default.png" alt="" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/meta/" class="card-tag">meta</a>
-    
-
-    <h3 class="card-title">
-      <a href="/interactive-charts-echarts-and-d3/">Interactive Charts with ECharts and D3</a>
-    </h3>
-
-    
-    <p class="card-excerpt">Embedding interactive data visualisations using Apache ECharts and D3 — declarative markup, no JavaScript required in the post.</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">26 Feb 2026 · 3 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-      
-<article class="post-card">
-
-  
-  <a href="/scrollytelling-with-maps-and-charts/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/og-default.png" alt="" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/meta/" class="card-tag">meta</a>
-    
-
-    <h3 class="card-title">
-      <a href="/scrollytelling-with-maps-and-charts/">Scrollytelling with Maps and Charts</a>
-    </h3>
-
-    
-    <p class="card-excerpt">How to build scroll-driven stories that update Leaflet maps and D3 charts as the reader scrolls through the narrative.</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">27 Feb 2026 · 5 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-      
-<article class="post-card">
-
-  
-  <a href="/sample-presentation/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/og-default.png" alt="" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/meta/" class="card-tag">meta</a>
-    
-
-    <h3 class="card-title">
-      <a href="/sample-presentation/">Introducing Loom</a>
-    </h3>
-
-    
-    <p class="card-excerpt">A walkthrough of the Loom stack and its capabilities.</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">28 Feb 2026 · 2 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-      
-<article class="post-card">
-
-  
-  <a href="/mapbox-gl-interactive-maps/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/og-default.png" alt="" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/meta/" class="card-tag">meta</a>
-    
-
-    <h3 class="card-title">
-      <a href="/mapbox-gl-interactive-maps/">Interactive Maps with Mapbox GL JS</a>
-    </h3>
-
-    
-    <p class="card-excerpt">Full-featured vector maps with custom styles, scroll-driven flyTo transitions, and automatic dark mode switching — using the Mapbox GL JS adapter.</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">1 Mar 2026 · 4 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-      
-<article class="post-card">
-
-  
-  <a href="/glaciers-field-sites/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/matterhorn.jpg" alt="The Matterhorn viewed from Findelen Glacier" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/science/" class="card-tag">science</a>
-    
-
-    <h3 class="card-title">
-      <a href="/glaciers-field-sites/">Glaciers I Have Known</a>
-    </h3>
-
-    
-    <p class="card-excerpt">A scroll-driven terrain tour of five glacier field sites across the Swiss Alps and Canadian Rockies — Findelen, Gorner, Mer de Glace, Peyto, and the...</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <img src="/assets/images/authors/paul-hobson.jpg" alt="Paul Hobson" class="card-avatar" width="24" height="24" loading="lazy" style="border-radius:50%;object-fit:cover;">
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">2 Mar 2026 · 9 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-      
-<article class="post-card">
-
-  
-  <a href="/documenting-fieldwork-media-and-embeds/" class="card-image" tabindex="-1" aria-hidden="true">
-    <img src="/assets/images/matterhorn.jpg" alt="Matterhorn and surrounding glaciers from Gornergrat" loading="lazy" width="600" height="338">
-  </a>
-  
-
-  <div class="card-body">
-
-    
-    <a href="/topic/meta/" class="card-tag">meta</a>
-    
-
-    <h3 class="card-title">
-      <a href="/documenting-fieldwork-media-and-embeds/">Documenting Fieldwork: Photos, Video, and Embedded Media</a>
-    </h3>
-
-    
-    <p class="card-excerpt">A practical guide to embedding rich media in Loom posts — photo galleries with lightbox, native video, YouTube and Vimeo embeds, and how to use...</p>
-    
-
-    <div class="card-meta">
-      
-      
-      
-      <div class="card-avatar card-avatar--initials" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"/>
-        </svg>
-      </div>
-      
-      <div class="card-meta-info">
-        <span class="card-author">
-
-
-
-
-
-
-
-
-  
-  
-    
-<a href="/author/paul-hobson/" class="author-link">Paul Hobson</a>
-    
-  
-  <span class="author-sep">, </span>
-
-  
-  
-    
-<a href="/author/sophie-marchand/" class="author-link">Sophie Marchand</a>
-    
-  
-  
-
-</span>
-        <span class="card-date">5 Mar 2026 · 9 min read</span>
-      </div>
-    </div>
-
-  </div><!-- /.card-body -->
-
-</article>
-
-      
-    </div>
-
-    
-
-
-  </div><!-- /.posts-section-inner -->
-</section>
+</div>
 
 </div>
 
@@ -1060,11 +362,13 @@
     <!-- Col 1: Brand -->
     <div class="footer-brand">
       <div class="footer-brand-logo">
-        <img loading="lazy" src="/assets/images/loom_collective.jpg" alt="Loom" width="28" height="28">
-        Loom<span>.</span>
+        
+        <img loading="lazy" src="/assets/images/og-default.png" alt="subhaus95" width="28" height="28">
+        
+        subhaus95<span>.</span>
       </div>
       
-      <p class="footer-brand-desc">Jekyll theme. Clean typography, dark mode, computational essays.</p>
+      <p class="footer-brand-desc">Homelab. Infrastructure experiments. Technical notes.</p>
       
 
       <div class="footer-social">
@@ -1122,7 +426,7 @@
 
   <div class="footer-bottom">
     <span class="footer-copy">
-      &copy; 2026 Loom.
+      &copy; 2026 subhaus95.
     </span>
     <div class="footer-legal">
       <a href="/privacy/">Privacy Policy</a>
@@ -1134,7 +438,7 @@
 
 
 <!-- Alpine.js bundle -->
-<script type="module" src="/assets/built/main.js"></script>
+<script type="module" src="/assets/dist/main.js"></script>
 
 <!-- Visualization runtime — detects and loads CDN libraries dynamically -->
 <script type="module" src="/assets/js/core.js"></script>
