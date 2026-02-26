@@ -341,7 +341,7 @@ With the shared infrastructure stable, the five sites were still publishing unde
 The include had hardcoded text from Loom Collective's original editorial description. Two changes made it generic:
 
 1. Replace hardcoded description with `{{ site.description }}`
-2. Wrap the entire include in `{% unless site.hide_subscribe_cta %}`
+2. Wrap the entire include in "{% unless site.hide_subscribe_cta %}"
 
 Sites that are not subscription-driven (pauldhobson, subhaus95) set `hide_subscribe_cta: true` in `_config.yml` and the block renders nothing. No layout changes required.
 
