@@ -15,7 +15,7 @@ permalink: /contact/
 
 Bug reports, template questions, or general correspondence — use the form below. You can also open an issue directly on [GitHub](https://github.com/subhaus95).
 
-<form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<form class="contact-form" action="https://formspree.io/f/xbdabrjw" method="POST">
   <input type="hidden" name="_site" value="subhaus95">
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
